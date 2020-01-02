@@ -28,10 +28,15 @@ $(call inherit-product, device/xiaomi/whyred/device.mk)
 # Inherit from custom vendor
 $(call inherit-product, vendor/MiuiCamera/config.mk)
 
-# Inherit some common Lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit some common AOSAP stuff.
+$(call inherit-product, vendor/aosap/config/common_full_phone.mk)
 
-PRODUCT_NAME := lineage_whyred
+# Set Boot Animination Resolution
+TARGET_BOOT_ANIMATION_RES := 1080
+TARGET_GAPPS_ARCH := arm64
+IS_PHONE := true
+
+PRODUCT_NAME := aosap_whyred
 PRODUCT_BRAND := Xiaomi
 PRODUCT_DEVICE := whyred
 PRODUCT_MANUFACTURER := Xiaomi
@@ -50,3 +55,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.build.fingerprint=xiaomi/whyred/whyred:8.1.0/OPM1.171019.011/V9.5.11.0.OEIMIFA:user/release-keys
 
 TARGET_VENDOR := Xiaomi
+
+AOSAP_BUILD_TYPE := hmooz999
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.aosap.maintainer=hmooz999
