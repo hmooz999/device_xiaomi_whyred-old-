@@ -15,3 +15,7 @@
 
 PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/aosap_whyred.mk
+
+COMMON_LUNCH_CHOICES += \
+	aosap_whyred-userdebug \
+	aosap_whyred-user
