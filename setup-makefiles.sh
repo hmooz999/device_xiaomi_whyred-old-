@@ -27,9 +27,9 @@ INITIAL_COPYRIGHT_YEAR=2018
 MY_DIR="${BASH_SOURCE%/*}"
 if [[ ! -d "$MY_DIR" ]]; then MY_DIR="$PWD"; fi
 
-LINEAGE_ROOT="$MY_DIR"/../../..
+AOSAP_ROOT="$MY_DIR"/../../..
 
-HELPER="$LINEAGE_ROOT"/vendor/lineage/build/tools/extract_utils.sh
+HELPER="$AOSAP_ROOT"/vendor/aosap/build/tools/extract_utils.sh
 if [ ! -f "$HELPER" ]; then
     echo "Unable to find helper script at $HELPER"
     exit 1
@@ -37,20 +37,20 @@ fi
 . "$HELPER"
 
 # Initialize the helper
-setup_vendor "$DEVICE" "$VENDOR" "$LINEAGE_ROOT"
+setup_vendor "$DEVICE" "$VENDOR" "$AOSAP_ROOT"
 
 # Copyright headers and guards
 write_headers
 
 write_makefiles "$MY_DIR"/proprietary-files.txt true
 
-cat << EOF >> "$BOARDMK"
+cat << EOF >> "$BOARDAOSAP"
 ifeq (\$(WITH_TWRP),true)
 TARGET_RECOVERY_DEVICE_DIRS += vendor/$VENDOR/$DEVICE/proprietary
 endif
 EOF
 
-cat << EOF >> "$ANDROIDMK"
+cat << EOF >> "$ANDROIDAOSAP"
 
 EOF
 
