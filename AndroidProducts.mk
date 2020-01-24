@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-PRODUCT_MAKEFILES := \=
+PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/aosp_whyred.mk
 
 COMMON_LUNCH_CHOICES += \
