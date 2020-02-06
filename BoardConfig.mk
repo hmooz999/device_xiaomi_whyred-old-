@@ -21,6 +21,8 @@
 # definition file).
 #
 
+BUILD_BROKEN_USES_NETWORK := true
+
 DEVICE_PATH := device/xiaomi/whyred
 
 # Compile libhwui in performance mode
