@@ -28,15 +28,16 @@ $(call inherit-product, device/xiaomi/whyred/device.mk)
 # Inherit from custom vendor
 $(call inherit-product, vendor/MiuiCamera/config.mk)
 
-# Inherit some common EXTENDEDUI stuff.
-$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
+# Inherit some common SYBERIA stuff.
+$(call inherit-product, vendor/syberia/config/common_full_phone.mk)
 
 # Set Boot Animination Resolution
 TARGET_BOOT_ANIMATION_RES := 1080
 TARGET_GAPPS_ARCH := arm64
 IS_PHONE := true
+TARGET_MINIMAL_APPS := false
 
-PRODUCT_NAME := aosp_whyred
+PRODUCT_NAME := syberia_whyred
 PRODUCT_BRAND := Xiaomi
 PRODUCT_DEVICE := whyred
 PRODUCT_MANUFACTURER := Xiaomi
@@ -56,6 +57,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 TARGET_VENDOR := Xiaomi
 
-AOSP_BUILD_TYPE := hmooz999
+SYBERIA_BUILDTYPE := hmooz999
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.aosp.maintainer=hmooz999
+    ro.syberia.maintainer=hmooz999

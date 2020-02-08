@@ -14,8 +14,8 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/aosp_whyred.mk
+    $(LOCAL_DIR)/syberia_whyred.mk
 
 COMMON_LUNCH_CHOICES += \
-	aosp_whyred-userdebug \
-	aosp_whyred-user
+	syberia_whyred-userdebug \
+	syberia_whyred-user
