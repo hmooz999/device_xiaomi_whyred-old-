@@ -186,6 +186,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.radio.calls.on.ims=1 \
     persist.dbg.wfc_avail_ovr=1
 
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.telephony.iwlan_operation_mode=legacy
+
 # ADB at boot
 persist.service.adb.enable=1
 persist.service.debuggable=1
