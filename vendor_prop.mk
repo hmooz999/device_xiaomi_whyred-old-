@@ -191,3 +191,6 @@ persist.service.adb.enable=1
 persist.service.debuggable=1
 persist.sys.usb.config=mtp,adb
 ro.adb.secure=0
+
+# Use mobile network override v2
+persist.sys.fflag.override.settings_network_and_internet_v2=true
